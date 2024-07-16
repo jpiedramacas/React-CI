@@ -62,4 +62,4 @@ jobs:
 ### Explicación de cada parte:
 1. **`name: CI Pipeline`**: Define el nombre de la pipeline.
 2. **`on: [push, pull_request]`**: Especifica que la pipeline se ejecutará en eventos de `push` y `pull_request`.
-3. **`jobs`**: Define los trabajos que se ejecut
+3. **`jobs`**: Define los trabajos que se ejecuta
