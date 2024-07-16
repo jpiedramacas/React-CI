@@ -1,4 +1,3 @@
-Para solucionar el problema de "bash: npx: command not found" en Windows, primero debes asegurarte de tener Node.js y npm instalados. npx viene incluido con npm (que a su vez se incluye con Node.js).
 
 Aquí están los pasos para instalar Node.js y npm en Windows:
 
@@ -30,3 +29,37 @@ Aquí están los pasos para instalar Node.js y npm en Windows:
      ```
    - Este comando descargará e instalará las dependencias necesarias y creará un nuevo proyecto React en la carpeta `my-app`.
 
+Tu archivo de configuración de GitHub Actions tiene un pequeño problema de indentación y un error tipográfico en el paso final. La palabra "Construir" debe ser "Build" y debe estar alineada correctamente. A continuación te dejo el archivo corregido:
+
+```yaml
+name: CI Pipeline
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '14'
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Run tests
+      run: npm test
+
+    - name: Build
+      run: npm run build
+```
+
+### Explicación de cada parte:
+1. **`name: CI Pipeline`**: Define el nombre de la pipeline.
+2. **`on: [push, pull_request]`**: Especifica que la pipeline se ejecutará en eventos de `push` y `pull_request`.
+3. **`jobs`**: Define los trabajos que se ejecut
