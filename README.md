@@ -29,7 +29,7 @@ Aquí están los pasos para instalar Node.js y npm en Windows:
      ```
    - Este comando descargará e instalará las dependencias necesarias y creará un nuevo proyecto React en la carpeta `my-app`.
 
-Tu archivo de configuración de GitHub Actions tiene un pequeño problema de indentación y un error tipográfico en el paso final. La palabra "Construir" debe ser "Build" y debe estar alineada correctamente. A continuación te dejo el archivo corregido:
+## GitHub Actions
 
 ```yaml
 name: CI Pipeline
